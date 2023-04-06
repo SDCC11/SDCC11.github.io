@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<head>
+    <title>About Us</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: whitesmoke;
+        min-height: 100vh;
+        max-height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .img    {
+        position: absolute;
+        margin-top: .5%;
+        margin-left: 47.5vw;
+        display: inline;
+        justify-content: center;
+    }
+
+    .banner {
+        background-color: whitesmoke;
+        display: block;
+        position: absolute;
+        height: 10vh;
+        width: 100%;
+        overflow: auto;
+        border-bottom: 2px solid;
+        border-image: linear-gradient(to right, rgb(109, 109, 109) 25%, rgb(37, 37, 37) 75%) 5;
+        z-index: -1;
+    }
+
+    .textBox    {
+        background-color: rgb(123, 63, 0);
+        position: relative;
+        color: whitesmoke;
+        margin-left: 2px;
+        padding: 10px;
+        max-width: 19.6%;
+        min-height: 220px;
+        border-radius: 2px;
+        display: inline-block;
+        font-size: larger;
+        top: 0px;
+        vertical-align: top;
+        text-align: center;
+    }
+
+    .fontTwo    {
+        font-size: medium;
+    }
+
+    .imgRef    {
+            border-radius: 4px;
+            width: 19.7%;
+            margin-top: 10vh;
+            float: left;
+            margin-left: 4px;
+            height: 40vh;
+        }
+
+    .button  {
+        background-color: transparent;
+        border: none;
+        text-decoration: none;
+        font-size: larger;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .button:hover, .buttonadd:focus {
+        color: rgb(123, 63, 0);
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <div TopNav>
+        <img class="img" src="images/Logos.png/logo-no-background.png" style="height: 8%;">
+        <a href="v2.html"><button class="button" style="float: right;margin-right: 2.5%; height: 10vh;">back</button></a>
+        <div class="banner">&nbsp;</div>
+    </div>
+
+    <div Team Members>
+        <img class="imgRef" src="images/boughton.jpg" alt="christian Boughton">
+        <img class="imgRef" src="images/DanielChrismanHeadshot.jpg" alt="Daniel Chrisman">
+        <img class="imgRef" src="images/Ella_Knott.jpg" alt="Ella Knott">
+        <img class="imgRef" src="images/Lith.jpg" alt="Lith Almadani">
+        <img class="imgRef" src="images/Micheal.jpg" alt="Michael Wieland" style="margin-top: 0px;">
+    </div>
+
+    <div AboutMe>
+        <div class="textBox">Christian Boughton<span class="fontTwo"><br><br>I am a senior in the Cyber Security Engineering program. I joined this program to hone the skills I learned as a network cryptologist in the USN. I currently reside in Des Moines, and when I'm not busy with school, you can find me out in nature with my wife and daughter</span></div>
+        <div class="textBox">Daniel Chrisman<span class="fontTwo"><br><br>am a senior in Computer Engineering and outside of school I play baseball on the Iowa State Club team. In my future I aspire to find a position that challenges me daily and to allow me to better suit our future with constant technological upgrades</div>
+        <div class="textBox">Ella Knott<span class="fontTwo"><br><br>I am a senior in Cybersecurity Engineering. I joined this program after being inspired by a high school extracurricular that taught kids cybersecurity. I am hoping to have a career in digital forensics or vulnerability management one day. In my free time you can find me gardening and taking care of my pet turkey.</div>
+        <div class="textBox">Lith Almadani<span class="fontTwo"><br><br>I am a senior software engineer who has a passion for exploring the world and watching soccer. </div>
+        <div class="textBox">Michael Wieland<span class="fontTwo"><br><br>I am a senior in software engineering. In my free time I enjoy playing soccer and volleyball. In the future I hope to have a position working on app development.</div>
+    </div>
+</body>
+</html>

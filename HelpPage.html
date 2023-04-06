@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<head>
+    <title>About Us</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: whitesmoke;
+        min-height: 100vh;
+        max-height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .img    {
+        position: absolute;
+        margin-top: .5%;
+        margin-left: 47.5vw;
+        display: inline;
+        justify-content: center;
+    }
+
+    .banner {
+        background-color: whitesmoke;
+        display: block;
+        position: absolute;
+        height: 10vh;
+        width: 100%;
+        overflow: auto;
+        border-bottom: 2px solid;
+        border-image: linear-gradient(to right, rgb(109, 109, 109) 25%, rgb(37, 37, 37) 75%) 5;
+        z-index: -1;
+    }
+
+    .textBox    {
+        background-color: rgb(123, 63, 0);
+        color: whitesmoke;
+        text-align: center;
+        max-width: 50%;
+        margin-left: 30%;
+        min-height: 220px;
+        border-radius: 10px;
+        display: inline-block;
+        margin-top: 16vh;
+    }
+
+
+    .button  {
+        background-color: transparent;
+        border: none;
+        text-decoration: none;
+        font-size: larger;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .button:hover, .buttonadd:focus {
+        color: rgb(123, 63, 0);
+    }
+
+    </style>
+</head>
+
+<body>
+    <div TopNav>
+        <img class="img" src="images/Logos.png/logo-no-background.png" style="height: 8%;">
+        <a href="v2.html"><button class="button" style="float: right;margin-right: 2.5%; height: 10vh;">back</button></a>
+        <div class="banner">&nbsp;</div>
+    </div>
+
+
+    <div class="textBox">This will be a simple instructions page on how to use this application<br>at the bottom will be a contact button or forum for submitting complaints</div>
+</body>
+</html>
