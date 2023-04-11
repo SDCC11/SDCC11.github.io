@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.row1   {
+    display: none;
+}
+.row1::after    {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.img    {
+    position: absolute;
+    margin-top: .5%;
+    margin-left: 47.5vw;
+    display: inline;
+    justify-content: center;
+}
+
+.header {
+    background-color: whitesmoke;
+    height: 10vh;
+    color: black;
+    padding: 0px;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, rgb(109, 109, 109) 25%, rgb(37, 37, 37) 75%) 5;
+    z-index: -1;
+}
+
+.smallHeader {
+    display: none;
+    background-color: whitesmoke;
+    height: 6vh;
+    color: black;
+    padding: 0px;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, rgb(109, 109, 109) 25%, rgb(37, 37, 37) 75%) 5;
+    z-index: -1;
+}
+
+.button  {
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button:hover, .buttonadd:focus {
+    color: rgb(123, 63, 0);
+}
+
+.buttonGroup  {
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.buttonGroup:hover, .buttonadd:focus {
+    color: rgb(123, 63, 0);
+}
+
+.smallButtonGroup   {
+    display: none;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.smallButtonGroup:hover, .buttonadd:focus {
+    color: rgb(123, 63, 0);
+}
+
+.inputBar   {
+    border: 1px solid rgb(123, 63, 0);
+    margin-top: 2vh;
+    margin-left: 10px;
+    font-size: larger;
+    border-radius: 4px;
+    float: left;
+    overflow: hidden;
+}
+
+.inputBar:focus::placeholder {
+    color: transparent;
+}
+
+
+.dropdown-content {
+    list-style-type: decimal;
+    display: none;
+    color: black;
+    font-size: larger;
+    max-width: 33.33%;
+    margin-top: 1vh; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: transparent;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.listBTN    {
+    background-color: transparent;
+    color: rgb(121, 119, 119);
+    font-size: large;
+    border: none;
+    float: "right";
+}
+
+.listBTN:hover, .listBTN:focus  {
+    color: black;
+    cursor: pointer;
+}
+
+.show   {
+    display: block;
+}
+
+.hide   {
+    display: none;
+}
+
+.footer {
+    background-color: rgb(123, 63, 0);
+    color: #ffffff;
+    height: 5vh;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .smallHeader {display: block;}
+  .smallButtonGroup {display: inline;}
+  .buttonGroup {display: none;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 540px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <img class="img" src="images/Logos.png/logo-no-background.png" style="height: 8%;">
+    <a href="Creators2.html"><button class="button" style="float: right;margin-right: 2.5%; height: 10vh;">about</button></a>
+    <a href="HelpPage.html"><button class="button" style="float: right;margin-right: 2.5%; height: 10vh;">help</button></a>
+</div>
+
+<div class="header" style="height: 6vh">
+    <input type="text" class="inputBar" id="location" placeholder="Location...">
+    <input type="text" class="inputBar" id="range" placeholder="Visits Per Week...">
+    <button class="buttonGroup" id="add" style="margin-top: 2vh; float:left; margin-left: 10px;">add</button>
+    <button class="buttonGroup" id="sho" style="margin-top: 2vh; float:left; margin-left: 10px;">show</button>
+    <button class="buttonGroup" id="sub" style="margin-top: 2vh; float:left; margin-left: 10px;">submit</button>
+</div>
+
+<div class="smallHeader">
+    <button  class="smallButtonGroup" id="addSmall" style="margin-top: 1vh; float:right; margin-right: 10px;">add</button>
+    <button  class="smallButtonGroup" id="shoSmall" style="margin-top: 1vh; float:right; margin-right: 10px;">show</button>
+    <button  class="smallButtonGroup" id="subSmall" style="margin-top: 1vh; float:right; margin-right: 10px;">submit</button>
+</div>
+
+<div class="row" id="fullScreenRow">
+    <div class="col-12">
+        <iframe id="mainFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94841.71333288122!2d-93.69641644217724!3d42.025946731683455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87ee70624634a06b%3A0x273156083cc75200!2sAmes%2C%20IA!5e0!3m2!1sen!2sus!4v1680729524781!5m2!1sen!2sus" width="100%" height="750vh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+</div>
+
+<div class="row1" id="partScreenRow">
+  <div class="col-4 dropdown-content" id="myDropdown">
+  </div>
+  <div class="col-8" style="float: right;">
+    <iframe id="mainFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94841.71333288122!2d-93.69641644217724!3d42.025946731683455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87ee70624634a06b%3A0x273156083cc75200!2sAmes%2C%20IA!5e0!3m2!1sen!2sus!4v1680729524781!5m2!1sen!2sus" width="100%" height="750vh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Home Finder(v3)</p>
+</div>
+
+<script>
+    var input = document.getElementById("range");
+    input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("add").click();
+        }
+    });
+
+    var input2 = document.getElementById("location");
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("add").click();
+        }
+    });
+
+    document.getElementById("addSmall").onclick = function()    {
+        document.getElementById("add").click();
+    }
+
+    document.getElementById("shoSmall").onclick = function()    {
+        document.getElementById("sho").click();
+    }
+
+    document.getElementById("subSmall").onclick = function()    {
+        document.getElementById("sub").click();
+    }
+
+    document.getElementById("add").onclick = function() {
+            const node = document.createElement("li");
+            const stringNode = document.createTextNode(document.getElementById("location").value += " ");
+            const stringNode2 = document.createTextNode(document.getElementById("range").value);
+            var listbtn = document.createElement("button");
+            listbtn.innerHTML = "x";
+            listbtn.className = "listBTN";
+            listbtn.setAttribute = ("id", "listbtnn");
+            listbtn.addEventListener("click", function() {node.remove();})
+            if((stringNode.nodeValue !== "") && (stringNode2.nodeValue !== ""))  {
+               node.appendChild(stringNode);
+               node.appendChild(stringNode2);
+               node.appendChild(listbtn);
+               document.getElementById("myDropdown").appendChild(node);
+               document.getElementById("location").value="";
+               document.getElementById("range").value="";
+            }
+            else{
+                document.getElementById("location").value="";
+                document.getElementById("range").value="";
+            }
+        }
+
+    document.getElementById("sho").onclick = function() {
+        document.getElementById("partScreenRow").classList.toggle("show");
+        document.getElementById("myDropdown").classList.toggle("show");
+        document.getElementById("fullScreenRow").classList.toggle("hide");
+    }
+</script>
+</body>
+</html>
+
+
